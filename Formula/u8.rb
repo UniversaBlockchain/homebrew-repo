@@ -11,7 +11,6 @@ class U8 < Formula
   depends_on "libzip" => :build
   depends_on "v8" => :build
   depends_on "cmake" => :build
-  depends_on :xcode => :build
 
   def install
     system "cmake", ".", "-DBREW_FORMULAE=true", "-DCMAKE_INSTALL_PREFIX=#{prefix}", "-DCMAKE_BUILD_TYPE=Release", "-DU8_BUILD_MONOLITH=true"
